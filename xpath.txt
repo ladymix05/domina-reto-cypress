@@ -1,0 +1,59 @@
+Este documento contiene las expresiones de xpath de las paginas
+
+LOGIN
+1. campo de texto username:
+//input[@id="user-name"]
+
+2. campo de texto password:
+//input[@id="password"]
+
+3. boton login:
+//input[@id="login-button"]
+
+INVENTORY
+1. boton añadir inventario:
+//div[text()="Sauce Labs Bike Light"]//ancestor::div[@class="inventory_item_description"]//div[@class="pricebar"]//button[text()="Add to cart"]
+
+
+2. Shopping cart button: a class="shopping_cart_link"
+//a[@class="shopping_cart_link"]
+
+3. Menu bar
+//button[@id="react-burger-menu-btn"]
+
+4. logout link
+//a[@id="logout_sidebar_link"]
+
+CART
+1. remove item
+//div[@class="cart_list"]//div[@class="inventory_item_name" and text()="Sauce Labs Bike Light"]//ancestor::div[@class="cart_item_label"]//div[@class="item_pricebar"]//button[text()="Remove"]
+
+2. checkout button
+//button[@id="checkout"]
+
+CHECKOUT step 1
+1. first name text
+//input[@id="first-name"]
+
+2. Last name
+//input[@id="last-name"]
+
+3. postal code
+//input[@id="postal-code"]
+
+4. continue button
+//input[@id="continue"]
+
+CHECKOUT step 2
+1. list of item to validate
+//div[@class="cart_list"]/div[@class="cart_item"]
+
+2. item that will be deleted
+//div[@class="cart_list"]/div[@class="cart_item"]/div[@class="cart_item_label"]//div[@class="inventory_item_name" and text()="Sauce Labs Backpack"]
+
+3. finish button
+//button[@id="finish"]
+
+CHECKOUT COMPLETE
+1. back to home btn:
+//button[@id="back-to-products"]
